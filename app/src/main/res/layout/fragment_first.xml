@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:mapbox="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FirstFragment">
+
+    <com.mapbox.mapboxsdk.maps.MapView
+        android:id="@+id/mapView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        mapbox:mapbox_cameraTargetLat="42.401610"
+        mapbox:mapbox_cameraTargetLng="12.864085"
+        mapbox:mapbox_cameraZoom="13.991072"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="bottom"
+        android:padding="5dp">
+
+        <LinearLayout
+            android:id="@+id/destinazione_Layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <EditText
+                android:id="@+id/destinazione_EditText"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="0dp"
+                android:alpha="0.5"
+                android:tooltipText="Destinazione"
+                android:inputType="text|textNoSuggestions"
+                android:text=""
+                android:imeOptions="actionDone"
+                />
+
+            <Button
+                android:id="@+id/ok_Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="@string/Ok_Button"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>
+
